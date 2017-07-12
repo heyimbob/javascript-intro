@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Javascript Intro</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<ul id="list">
+	</ul>
+</body>
+<script>
+	var shoppingList = [
+	'milk', 'bananas', 'orange juice', 'waffles', 'toast', 'bacon'
+	];
+	var listElement = document.getElementById('list');
+	// log variables
+	console.log(shoppingList);
+	console.log(listElement);
+	// for each shopping list
+	shoppingList.forEach(function(item) {
+		// console log item
+		console.log(item);
+		//create a li element
+		var li = document.createElement('li');
+		// set innerHTML (content in between HTML tages)
+
+		li.innerHTML = item;
+		console.log(li);
+		//append the li to the UL
+		listElement.append(li);
+	});
+</script>
+</html>
